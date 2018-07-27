@@ -1,0 +1,14 @@
+#v1{
+    border: 1px solid red;
+}
+
+#bg{
+    width: 172px;
+    height: 102px;
+    background-image: url(../imgs/1.png);
+}
+#bg2{
+    width: 288px;
+    height: 180px;
+    background-image: url(../imgs/bg.jpg);
+}
