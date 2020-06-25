@@ -1,4 +1,8 @@
-# FLIP 效果实现
+# 原生 js 实现 FLIP 效果实现
+
+Demo
+
+![效果](./FLIP.gif)
 
 ## 参考
 
