@@ -4,6 +4,8 @@ Demo
 
 ![效果](./FLIP.gif)
 
+[codepen](https://codepen.io/claviering/pen/MWKoXMx)
+
 ## 参考
 
 > https://zhuanlan.zhihu.com/p/146641652
