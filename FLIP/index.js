@@ -6,7 +6,7 @@
  * time 动画时间 单位 s
  * timingFunction transition-timing-function: 动画速度函数
  */
-const APP = function init(config) {
+function flip(config) {
   let app = ''; // 缓存容器
   let numberList = []; // 保存数字
   let firstPostion = {}; // 初始位置信息
@@ -26,7 +26,7 @@ const APP = function init(config) {
   /**
    * 初始化容器 id，数字，按钮事件
    */
-  this.init = function () {
+  function init() {
     app = document.getElementById(config.app);
     if (!app) throw new Error('容器元素 id 错误')
     var btn = document.getElementById(config.play);
@@ -72,7 +72,7 @@ const APP = function init(config) {
   function getPostion(domList) {
     let firstInfo = {};
     domList.forEach(item => {
-      rectInfo = item.getBoundingClientRect();
+      let rectInfo = item.getBoundingClientRect();
       firstInfo[item.id] = {
         left: rectInfo.left,
         top: rectInfo.top
@@ -87,8 +87,8 @@ const APP = function init(config) {
     let domList = app.querySelectorAll(`div`);
     let trans = {};
     for (const key in firstPostion) {
-      trX = firstPostion[key].left - lastPostion[key].left;
-      trY = firstPostion[key].top - lastPostion[key].top;
+      let trX = firstPostion[key].left - lastPostion[key].left;
+      let trY = firstPostion[key].top - lastPostion[key].top;
       trans[key] = `translateX(${trX}px) translateY(${trY}px)`;
     }
     domList.forEach(item => {
@@ -120,13 +120,5 @@ const APP = function init(config) {
     lastPostion = render(randomList(numberList));
     invert();
   }
+  init();
 }
-
-const config = {
-  app: 'app', // 容器 id
-  play: 'play', // 按钮 id
-  time: 1, // 动画时间 单位 s
-  timingFunction: 'linear', // transition-timing-function: 动画速度函数
-};
-let app = new APP(config);
-app.init();

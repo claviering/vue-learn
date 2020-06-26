@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./dist.css">
   <title>FLIP</title>
 </head>
+
 <body>
   <div class="button-content">
     <button id="play" class="play-button">乱序</button>
   </div>
   <div id="app"></div>
 </body>
-<script src="./index.js"></script>
+<!-- <script src="./index.js"></script> -->
+<script src="./dist.js"></script>
+<script>
+  const config = {
+    app: 'app', // 容器 id
+    play: 'play', // 按钮 id
+    time: 1, // 动画时间 单位 s
+    timingFunction: 'linear', // transition-timing-function: 动画速度函数
+  };
+  // flip(config);
+  flipNumber.flip(config);
+</script>
+
 </html>
