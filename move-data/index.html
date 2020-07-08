@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文字走马灯效果实现</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <!-- 固定宽度, 文字从右到左滚动出现, 首尾连接 -->
+  <div class="live-title-hidden-from-right-to-left m-b">
+    <div class="move-wrap">
+      <p class="scroll-title">床前明月光，疑是地上霜。举头望明月，低头思故乡</p>
+      <p class="scroll-title">床前明月光，疑是地上霜。举头望明月，低头思故乡</p>
+    </div>
+  </div>
+  <!-- 文字在容器中左右滚动 -->
+  <div class="live-title-between-left-right m-b hover-paused">
+    <p class="move-wrap">床前明月光，疑是地上霜。举头望明月，低头思故乡</p>
+  </div>
+  <!-- 不固定宽度, 文字从右到左滚动出现，首尾不连接-->
+  <div class="live-title-from-right-to-left hover-paused">
+    <p class="move-wrap">床前明月光，疑是地上霜。举头望明月，低头思故乡</p>
+  </div>
+</body>
+
+</html>
