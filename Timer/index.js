@@ -56,22 +56,6 @@ function Time(time) {
     if (second) {
       initSecond(second);
     }
-    if (tmpSecondTenDigits < 0 && 0 < tmpMinute) {
-      secondTenDigits = 5;
-      minute -= 1;
-      tmpSecondTenDigits = 5;
-      tmpMinute -= 1;
-    } else if (tmpSecondTenDigits < 0 && tmpMinute <= 0 && 0 < tmpHour) {
-      secondTenDigits = 5;
-      minute = 59;
-      hour -= 1;
-      tmpSecondTenDigits = 5;
-      tmpMinute = 59;
-      tmpHour -= 1;
-    } else if (tmpMinute <= 0 && tmpHour <= 0) {
-      minute = 0;
-      tmpMinute = 0;
-    }
     initSecondTenDigits(tmpSecondTenDigits);
     initMinute(tmpMinute);
     initHour(tmpHour);
@@ -81,6 +65,16 @@ function Time(time) {
    */
   function decrease() {
     secondTenDigits = secondTenDigits - 1;
+    if (secondTenDigits < 0 && 0 < minute) {
+      secondTenDigits = 5;
+      minute -= 1;
+    } else if (secondTenDigits < 0 && minute <= 0 && 0 < hour) {
+      secondTenDigits = 5;
+      minute = 59;
+      hour -= 1;
+    } else if (minute <= 0 && hour <= 0) {
+      minute = 0;
+    }
     initTextContent(false, secondTenDigits, minute, hour);
   }
   /**
