@@ -1,1 +1,116 @@
-html{height:100%}body{margin:0px;padding:0px;height:100%;width:100%;display:flex;align-items:center;justify-content:center}@keyframes rotate{0%{transform:rotateX(0)}100%{transform:rotateX(-360deg)}}@keyframes opacity-item{0%{opacity:0}10%{opacity:1}20%{opacity:0}40%{opacity:0}90%{opacity:0}100%{opacity:0}}.app{display:flex;font-size:100px}.play{animation:rotate 10s linear infinite paused;transform-style:preserve-3d}.play>div:nth-child(1){transform:rotateX(0deg) translateZ(150px);animation:opacity-item 10s linear -1s infinite paused;opacity:0}.play>div:nth-child(2){transform:rotateX(36deg) translateZ(150px);animation:opacity-item 10s linear 0s infinite paused;opacity:0}.play>div:nth-child(3){transform:rotateX(72deg) translateZ(150px);animation:opacity-item 10s linear 1s infinite paused;opacity:0}.play>div:nth-child(4){transform:rotateX(108deg) translateZ(150px);animation:opacity-item 10s linear 2s infinite paused;opacity:0}.play>div:nth-child(5){transform:rotateX(144deg) translateZ(150px);animation:opacity-item 10s linear 3s infinite paused;opacity:0}.play>div:nth-child(6){transform:rotateX(180deg) translateZ(150px);animation:opacity-item 10s linear 4s infinite paused;opacity:0}.play>div:nth-child(7){transform:rotateX(216deg) translateZ(150px);animation:opacity-item 10s linear 5s infinite paused;opacity:0}.play>div:nth-child(8){transform:rotateX(252deg) translateZ(150px);animation:opacity-item 10s linear 6s infinite paused;opacity:0}.play>div:nth-child(9){transform:rotateX(288deg) translateZ(150px);animation:opacity-item 10s linear 7s infinite paused;opacity:0}.play>div:nth-child(10){transform:rotateX(324deg) translateZ(150px);animation:opacity-item 10s linear 8s infinite paused;opacity:0}.running{animation-play-state:running}.running>div{animation-play-state:running !important}.second>div{position:absolute}.second p{margin:0px}
+html {
+  height: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(-360deg);
+  }
+}
+@keyframes opacity-item {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.app {
+  display: flex;
+  font-size: 100px;
+}
+.play {
+  animation: rotate 10s linear infinite paused;
+  transform-style: preserve-3d;
+}
+.play > div:nth-child(1) {
+  transform: rotateX(0deg) translateZ(150px);
+  animation: opacity-item 10s linear -1s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(2) {
+  transform: rotateX(36deg) translateZ(150px);
+  animation: opacity-item 10s linear 0s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(3) {
+  transform: rotateX(72deg) translateZ(150px);
+  animation: opacity-item 10s linear 1s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(4) {
+  transform: rotateX(108deg) translateZ(150px);
+  animation: opacity-item 10s linear 2s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(5) {
+  transform: rotateX(144deg) translateZ(150px);
+  animation: opacity-item 10s linear 3s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(6) {
+  transform: rotateX(180deg) translateZ(150px);
+  animation: opacity-item 10s linear 4s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(7) {
+  transform: rotateX(216deg) translateZ(150px);
+  animation: opacity-item 10s linear 5s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(8) {
+  transform: rotateX(252deg) translateZ(150px);
+  animation: opacity-item 10s linear 6s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(9) {
+  transform: rotateX(288deg) translateZ(150px);
+  animation: opacity-item 10s linear 7s infinite paused;
+  opacity: 0;
+}
+.play > div:nth-child(10) {
+  transform: rotateX(324deg) translateZ(150px);
+  animation: opacity-item 10s linear 8s infinite paused;
+  opacity: 0;
+}
+.running {
+  animation-play-state: running;
+}
+.running > div {
+  animation-play-state: running !important;
+}
+.second > div {
+  position: absolute;
+}
+.second p {
+  margin: 0px;
+}

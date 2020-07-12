@@ -1,12 +1,12 @@
 // 前面补零
-fillZero = (num, len) => num.toString().padStart(len, "0");
+const fillZero = (num, len) => num.toString().padStart(len, "0");
 
 /**
  * 
  * @param {Object} config 倒计时 配置
  */
 function Time(config) {
-  let hour, minute, secondTenDigits;
+  let hour, minute, second, secondTenDigits;
   /**
    * 初始化开始的秒数
    * @param {Number | String} second 

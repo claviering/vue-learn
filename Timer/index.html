@@ -10,5 +10,13 @@
   <div id="app" class="app">
   </div>
 </body>
-<script src="./index.js"></script>
+<!-- <script src="./index.js"></script> -->
+<script src="./timer.min.js"></script>
+<script>
+  const config = {
+  timer: '00:00:21', // 计数器时间
+  app: "#app",
+}
+let app = new timer.Time(config);
+</script>
 </html>
