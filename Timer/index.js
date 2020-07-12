@@ -153,7 +153,7 @@ function Time(config) {
   init();
 }
 const config = {
-  timer: '00:00:01', // 计数器时间
+  timer: '00:01:01', // 计数器时间
   app: "#app",
 }
 let app = new Time(config);
