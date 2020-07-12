@@ -3,9 +3,9 @@ fillZero = (num, len) => num.toString().padStart(len, "0");
 
 /**
  * 
- * @param {String} time 倒计时 hh:mm:ss
+ * @param {Object} config 倒计时 配置
  */
-function Time(time) {
+function Time(config) {
   let hour, minute, secondTenDigits;
   /**
    * 初始化开始的秒数
@@ -107,17 +107,53 @@ function Time(time) {
     let secondDom = document.querySelector('#second');
     secondDom.classList.toggle('running');
   }
+  function initApp(app) {
+    let appDom = document.querySelector(app);
+    if (!appDom) throw new Error('app id 错误');
+    appDom.innerHTML = `
+    <div id="hour" class="hour">00</div>
+    <div class="colon">:</div>
+    <div id="minute" class="minute">00</div>
+    <div class="colon">:</div>
+    <div id="second-ten-digits" class="second-ten-digits">0</div>
+    <div id="second" class="second play">
+      <div>0</div>
+      <div>9</div>
+      <div>8</div>
+      <div>7</div>
+      <div>6</div>
+      <div>5</div>
+      <div>4</div>
+      <div>3</div>
+      <div>2</div>
+      <div>1</div>
+    </div>`;
+  }
+  /**
+   * 正则表达式校验时间
+   * @param {String} timer 时间
+   */
+  function testTimer(timer) {
+    let s = /^\d{2}:\d{2}:\d{2}/g;
+    return s.test(timer);
+  }
   function init() {
-    let timeSplit = time.split(':');
+    const {app, timer} = config;
+    if (!testTimer(timer)) return false;
+    let timeSplit = timer.split(':');
     hour = Number.parseInt(timeSplit[0]);
     minute = Number.parseInt(timeSplit[1]);
     second = Number.parseInt(timeSplit[2]);
     secondTenDigits = Math.floor(second / 10);
     let totalSecond = second + minute * 60 + hour * 3600;
+    initApp(app);
     initTextContent(second, secondTenDigits, minute, hour);
     interval(totalSecond);
   }
   init();
 }
-
-let app = new Time('00:10:03');
+const config = {
+  timer: '00:00:01', // 计数器时间
+  app: "#app",
+}
+let app = new Time(config);
